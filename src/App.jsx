@@ -33,12 +33,14 @@ function App() {
         <option value="Backlog">Backlog</option>
         <option value="Playing">Playing</option>
         <option value="Completed">Completed</option>
+        <option value="Abandoned">Abandoned</option>
       </select>
       <button onClick={handleAdd}>Add Game</button>
       <button onClick={() => setFilter("All")}>All</button>
       <button onClick={() => setFilter("Backlog")}>Backlog</button>
       <button onClick={() => setFilter("Playing")}>Playing</button>
       <button onClick={() => setFilter("Completed")}>Completed</button>
+      <button onClick={() => setFilter("Abandoned")}>Abandoned</button>
       <ul>
         {visibleGames.map((game) => (
           <li key={game.name}>
